@@ -28,7 +28,6 @@ This project was build from a psd file i was given for the frontend developer te
 ## Technologies
 
 |_HTML_|_CSS_|_JavaScript_|_Bootstrap_|_Flickity_|
-|-|-|-|-|
 
 ## Demo
 
