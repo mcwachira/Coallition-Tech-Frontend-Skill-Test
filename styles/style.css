@@ -79,6 +79,7 @@ header {
 
 .nav-links a,
 .second-nav-links a {
+    
     cursor: pointer;
     font-weight: 600;
     font-family: var(--nunito);
