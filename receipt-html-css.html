@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .receipt-container {
+            width: 21.5cm;
+            height: 20.2cm;
+            background-color: white;
+            padding: 10mm;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Perforation on the sides */
+        .perforation {
+            position: absolute;
+            width: 3mm;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                white 0mm,
+                white 2mm,
+                black 2mm,
+                black 2.5mm
+            );
+        }
+
+        .perforation.left {
+            left: -3mm;
+        }
+
+        .perforation.right {
+            right: -3mm;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 5mm;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: bold;
+            color: #dd3b3b;
+        }
+
+        .header p {
+            margin: 2mm 0;
+            font-size: 10px;
+        }
+
+        .header .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header .contact-info div {
+            width: 48%;
+            text-align: left;
+        }
+
+        .header .contact-info div.right {
+            text-align: right;
+        }
+
+        /* Invoice and company details */
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5mm;
+        }
+
+        .details .left, .details .right {
+            font-size: 10px;
+            width: 48%;
+        }
+
+        .details .right {
+            text-align: right;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            margin-bottom: 5mm;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 4px;
+            text-align: left;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            margin-top: 5mm;
+        }
+
+        .footer .thanks {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer .note {
+            width: 100%;
+            font-size: 8px;
+            text-align: center;
+            margin-top: 5mm;
+        }
+    </style>
+</head>
+<body>
+
+<div class="receipt-container">
+    <!-- Perforations -->
+    <div class="perforation left"></div>
+    <div class="perforation right"></div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>UCHUMI CHEMICALS LTD.</h1>
+        <p>"Your partner of first choice"</p>
+        <div class="contact-info">
+            <div>
+                <p>P.O. Box 18448-00500, Nairobi, Kenya</p>
+                <p>Email: uchumichem@gmail.com</p>
+            </div>
+            <div class="right">
+                <p>Phone: 0722-515150, 0710-600834</p>
+                <p>Fax: 0773 007927</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice and Company Details -->
+    <div class="details">
+        <div class="left">
+            <p><strong>Invoice To:</strong> CASH SALE SHAMCO PAINTS</p>
+            <p><strong>PIN No:</strong> P051156245X</p>
+        </div>
+        <div class="right">
+            <p><strong>Invoice No:</strong> 84721</p>
+            <p><strong>Invoice Date:</strong> 26/08/2024</p>
+            <p><strong>Date of Supply:</strong></p>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Unit</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Net Amount</th>
+                <th>S/T</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>LOCARN330</td>
+                <td>CARBON BLACK N330</td>
+                <td>KG</td>
+                <td class="right-align">25.00</td>
+                <td class="right-align">300.00</td>
+                <td class="right-align">7,500.00</td>
+                <td class="right-align">V</td>
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+                <td class="right-align">7,500.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+                <td class="right-align">1,200.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+                <td class="right-align">8,700.00</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="thanks">
+            <p>Thank you for your business!!</p>
+        </div>
+    </div>
+
+    <!-- Note -->
+    <div class="note">
+        <p>Notwithstanding delivery of documents, shipment of goods or any other act of occurrence, ownership in the goods sold hereby shall remain vested in UCHUMI CHEMICALS LTD. until paid for in full.</p>
+    </div>
+</div>
+
+</body>
+</html>

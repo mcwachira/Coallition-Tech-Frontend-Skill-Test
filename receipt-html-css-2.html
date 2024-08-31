@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uchumi Chemicals Receipt</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .receipt {
+            width: 21.5cm;
+            height: 20.2cm;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .printable-area {
+            width: 8in;
+            height: 9.5in;
+            margin: auto;
+            padding: 0.5in;
+            box-sizing: border-box;
+        }
+        .perforations {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
+            background-size: 1px 10px;
+        }
+        .perforations-left { left: 5px; }
+        .perforations-right { right: 5px; }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c00;
+        }
+        .slogan {
+            font-style: italic;
+            color: #666;
+        }
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .invoice-table th {
+            background-color: #f2f2f2;
+        }
+        .totals {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <div class="perforations perforations-left"></div>
+        <div class="perforations perforations-right"></div>
+        <div class="printable-area">
+            <div class="header">
+                <div class="logo">UCHUMI CHEMICALS LTD.</div>
+                <div class="slogan">"Your partner of first choice"</div>
+            </div>
+            <div class="invoice-details">
+                <div>
+                    <strong>Invoice To:</strong><br>
+                    CASH SALE<br>
+                    SHAMCO PAINTS<br>
+                    PIN NO: P051156245X
+                </div>
+                <div>
+                    <strong>Invoice No:</strong> 84721<br>
+                    <strong>Date:</strong> 26/08/2024
+                </div>
+            </div>
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Nett Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LOCARN330</td>
+                        <td>CARBON BLACK N330</td>
+                        <td>KG</td>
+                        <td>25.00</td>
+                        <td>300.00</td>
+                        <td>7,500.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="totals">
+                <p><strong>Sub Total:</strong> 7,500.00</p>
+                <p><strong>V.A.T:</strong> 1,200.00</p>
+                <p><strong>Gross Amount Due:</strong> 8,700.00</p>
+            </div>
+            <div class="footer">
+                Thank you for your business!!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
